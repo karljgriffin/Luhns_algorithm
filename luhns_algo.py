@@ -5,7 +5,6 @@
 
 import csv
 
-
 class CreditCard:
 
     allcards = []
@@ -36,11 +35,9 @@ class CreditCard:
             print("Card number is not correct length...")
 
         if firstcriteria:
-            lst = [int(x)*2 if i % 2 == 0 else int(x)
-                   for i, x in enumerate(numbers)]
+            lst = [int(x)*2 if i % 2 == 0 else int(x) for i, x in enumerate(numbers)]
             lst_str = [str(x) for x in lst]
-            lst_final = [(int(lst_str[i][0]) + int(lst_str[i][1])) if int(lst_str[i])
-                         > 9 else int(lst_str[i]) for i, x in enumerate(lst_str)]
+            lst_final = [(int(lst_str[i][0]) + int(lst_str[i][1])) if int(lst_str[i]) > 9 else int(lst_str[i]) for i, x in enumerate(lst_str)]
             final_sum = sum(lst_final)
 
         print("Final sum:", final_sum)
